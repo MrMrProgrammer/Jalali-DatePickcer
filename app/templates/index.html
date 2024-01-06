@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Date picker</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css">
+    <script type="text/javascript"
+            src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"></script>
+
+</head>
+<body>
+
+<form action="{% url 'index' %}" method="post">
+
+    {% csrf_token %}
+
+    <input type="text" data-jdp name="date" autocomplete="off">
+
+    <button type="submit">ذخیره</button>
+</form>
+
+<script>
+    jalaliDatepicker.startWatch();
+</script>
+
+</body>
+</html>
