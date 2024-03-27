@@ -9,6 +9,9 @@ pip install jdatetime
 
 ```python
 from jdatetime import datetime, date
+from django.shortcuts import render
+from .models import YourModel
+from .forms import YourForm
 
 def jalali_to_gregorian(jalali_date):
     # تبدیل تاریخ Jalali به میلادی
@@ -16,13 +19,9 @@ def jalali_to_gregorian(jalali_date):
     gregorian_datetime = jalali_datetime.togregorian()
     return gregorian_datetime
 
-from django.shortcuts import render
-from .models import YourModel
-from .forms import YourForm
-
 def your_view(request):
     if request.method == 'POST':
-        # فرم را از درخواست بگیرید
+
         form = YourForm(request.POST)
 
         if form.is_valid():
