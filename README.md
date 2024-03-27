@@ -7,7 +7,7 @@ ChatGPT code :
 pip install jdatetime
 ```
 
-```markdown
+```python
 from jdatetime import datetime, date
 
 def jalali_to_gregorian(jalali_date):
