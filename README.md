@@ -3,6 +3,7 @@ jalali date picker :
 
 ChatGPT code :
 
+```markdown
 pip install jdatetime
 
 from jdatetime import datetime, date
@@ -36,3 +37,4 @@ def your_view(request):
         form = YourForm()
 
     return render(request, 'your_template.html', {'form': form})
+```
